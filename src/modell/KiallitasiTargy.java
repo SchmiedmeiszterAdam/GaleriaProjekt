@@ -9,7 +9,7 @@ public abstract class KiallitasiTargy implements Comparable<KiallitasiTargy> {
     String keszito, cim;
     private static Calendar c = Calendar.getInstance();
 
-    public KiallitasiTargy(Date letrehozas, String keszito, String cim) throws RosszDatumException {
+    public KiallitasiTargy(String keszito, String cim, Date letrehozas) throws RosszDatumException {
         if (letrehozas.after(c.getTime())) {
             throw new RosszDatumException("Nem jó dátum");
         } else {
@@ -20,7 +20,7 @@ public abstract class KiallitasiTargy implements Comparable<KiallitasiTargy> {
     }
 
     public KiallitasiTargy(String keszito, String cim) throws RosszDatumException {
-        this(c.getTime(), keszito, cim);
+        this(keszito, cim, c.getTime());
     }
 
     public String getKeszito() {
@@ -31,4 +31,10 @@ public abstract class KiallitasiTargy implements Comparable<KiallitasiTargy> {
         return cim;
     }
 
+    @Override
+    public String toString() {
+        return "KiallitasiTargy{" + "letrehozas=" + letrehozas + ", keszito=" + keszito + ", cim=" + cim + '}';
+    }
+
+   
 }

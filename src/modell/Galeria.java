@@ -11,7 +11,7 @@ public class Galeria implements Iterable<KiallitasiTargy> {
         this.kiallitasiTargyak = new ArrayList<>();
     }
 
-    private void kiallitasiTargyFelvetel(KiallitasiTargy targy) {
+    public void kiallitasiTargyFelvetel(KiallitasiTargy targy) {
         this.kiallitasiTargyak.add(targy);
     }
 

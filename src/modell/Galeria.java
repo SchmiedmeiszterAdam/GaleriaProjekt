@@ -1,9 +1,10 @@
 package modell;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Galeria implements Iterable<KiallitasiTargy> {
+public class Galeria implements Iterable<KiallitasiTargy>, Serializable {
 
     ArrayList<KiallitasiTargy> kiallitasiTargyak;
 

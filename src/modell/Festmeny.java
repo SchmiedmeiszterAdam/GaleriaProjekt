@@ -1,11 +1,12 @@
 package modell;
 
+import java.io.Serializable;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Date;
 
-public class Festmeny extends KiallitasiTargy {
+public class Festmeny extends KiallitasiTargy implements Serializable{
 
     private String eleresiUt;
 
